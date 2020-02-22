@@ -1,5 +1,5 @@
 {
-  "name": "binary-search",
+  "name": "binary-search-maa",
   "version": "1.0.0",
   "description": "a small es6+ module to binary search sorted arrays",
   "main": "index.js",
