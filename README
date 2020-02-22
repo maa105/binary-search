@@ -1,0 +1,26 @@
+```js
+import binarySearch from 'binary-search';
+
+const { found, index } = binarySearch([0, 1, 2, 4], 1);
+// found = true, index = 1
+
+const { found, index } = binarySearch([0, 1, 2, 4], 3);
+// found = false, index = 3
+
+const { found, index } = binarySearch([0, 1, 2, 4], 4);
+// found = true, index = 3
+
+const { found, index } = binarySearch([0, 1, 1, 1, 1, 1, 2, 4], 1);
+// found = true, index = 1(always)
+
+// demo usage to insert srch in arr in the correct position if it does not exists
+const { found, index } = binarySearch(arr, srch);
+if(!found) {
+  arr.splice(index, 0, srch);
+}
+
+// can send a comparison function, e.g. sorted desc:
+const { found, index } = binarySearch([4, 2, 1, 0], 1, (a, b) => b - a);
+// found = true, index = 2
+
+```
