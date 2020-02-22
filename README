@@ -1,3 +1,12 @@
+# Binary Search
+
+A function that takes in a sorted array (arr), an item to search (srch) and optionally a compare function (compareFunction) used to compare elements in array
+
+The compare function takes two arguments a and b and should return a number < 0 if a < b, 0 if a = b, and a number > 0 if a > b)
+
+The search returns an object ({found: boolean, index: number}) with 'found' property to indicate if srch was found in arr, and an 'index' property indicating the first occurence of srch if it was found or the index to insert srch in so as array is still sorted (might be arr.length if srch is greater than all items in array)
+
+
 ```js
 import binarySearch from 'binary-search';
 
@@ -22,5 +31,4 @@ if(!found) {
 // can send a comparison function, e.g. sorted desc:
 const { found, index } = binarySearch([4, 2, 1, 0], 1, (a, b) => b - a);
 // found = true, index = 2
-
 ```

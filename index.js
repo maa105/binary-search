@@ -5,7 +5,7 @@ const defaultCompareFunction = (a, b) => {
  * @param {Array} arr the sorted array to search
  * @param srch item to search for
  * @param {Function} compareFunction the function used to compare elements in array, it takes two arguments a and b (should return < 0 if a < b, 0 if a = b, > 0 if a > b)
- * @returns {{found: boolean, index: number}} returns an object with 'found' property to indicate if srch was found in arr, and an 'index' property indicating the first occurence of srch if it was found or index to insert srch in so as array is still sorted (might be arr.length if srch is greater than all items in array)
+ * @returns {{found: boolean, index: number}} returns an object with 'found' property to indicate if srch was found in arr, and an 'index' property indicating the first occurence of srch if it was found or the index to insert srch in so as array is still sorted (might be arr.length if srch is greater than all items in array)
  */
 const binarySearch = (arr, srch, compareFunction = defaultCompareFunction) => {
   if(arr.length === 0) {
